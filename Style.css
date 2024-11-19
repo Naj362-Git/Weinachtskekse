@@ -1,3 +1,15 @@
 body {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+}
+.überschrift {
+  background-image: url(https://www.stilartmoebel.de/zuhause-bei-sam/wp-content/uploads/2014/12/weihnachten-feiern-europa-traditionen-1024x682.jpg);
+  text-align: center;
+  height: 200px;
+  width: 100%;
+  margin: 0;
+  align-content: center;
+  background-repeat: no-repeat;
+  background-position: center;
 }
