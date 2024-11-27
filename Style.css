@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
 }
-.überschrift {
+.überschrift-oben {
   background-image: url(https://www.stilartmoebel.de/zuhause-bei-sam/wp-content/uploads/2014/12/weihnachten-feiern-europa-traditionen-1024x682.jpg);
   height: 200px;
   width: 1020px;
@@ -20,6 +20,12 @@ body {
   padding: 10px;
   border-radius: 10px;
   margin: auto;
+}
+.sub-heading {
+  font-size: 27px;
+}
+.sub-sub-heading {
+  font-size: 20px;
 }
 .content {
   order: 2;
