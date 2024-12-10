@@ -47,3 +47,8 @@ body {
 .Seite2 {
   order: 3;
 }
+.input {
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
