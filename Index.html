@@ -41,7 +41,12 @@
           <div class="sub-heading">Box Größe</div>
           <div>
             <label>
-              <input type="radio" name="boxSize" value="5" />
+              <input
+                type="radio"
+                name="boxSize"
+                value="5"
+                onchange="updatebox"
+              />
               15 Kekse - 5€
             </label>
           </div>
@@ -129,7 +134,7 @@
         </div>
 
         <!--Extra Toppings-->
-        <div class="input">
+        <div>
           <div class="sub-heading">Extra Toppings (je 1€)</div>
           <div>
             <label>
