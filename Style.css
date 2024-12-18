@@ -52,3 +52,26 @@ body {
   height: 0;
   width: 0;
 }
+.verpackung {
+  border-radius: 18px;
+  height: fit-content;
+  width: fit-content;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 20px;
+  background-color:rgb(250, 217, 217);
+  color:black;
+  }
+  
+.verpackung:hover {
+  border-radius: 18px;
+  height: fit-content;
+  width: fit-content;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 20px;
+  background-color:rgb(217, 241, 250);
+  color:black;
+}
