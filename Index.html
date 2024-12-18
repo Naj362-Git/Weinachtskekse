@@ -64,25 +64,30 @@
           <div class="sub-heading">Keksform</div>
           <div>
             <label>
-              <input type="radio" name="shape" value="0" />
+              <input type="radio" name="shape" value="0" id="runde-kekse" />
               Rund (gratis)
             </label>
           </div>
           <div>
             <label>
-              <input type="radio" name="shape" value="0.5" />
+              <input type="radio" name="shape" value="0.5" id="stern-kekse" />
               Stern (0,50€/Keks)
             </label>
           </div>
           <div>
             <label>
-              <input type="radio" name="shape" value="0.5" />
+              <input
+                type="radio"
+                name="shape"
+                value="0.5"
+                id="tannenbaum-kekse"
+              />
               Tannenbaum (0,50€/Keks)
             </label>
           </div>
           <div>
             <label>
-              <input type="radio" name="shape" value="0" />
+              <input type="radio" name="shape" value="0" id="mischung" />
               Mischung
             </label>
           </div>
@@ -214,6 +219,13 @@
               Karte mit persönlichem Text (1,50€)
             </label>
           </div>
+        </div>
+
+        <div>
+          <div class="sub-heading">Preis</div>
+          <div id="total"></div>
+          <div id="shipping"></div>
+          <div id="VAT"></div>
         </div>
 
         <script src="Index.js"></script>
