@@ -13,226 +13,239 @@
         <div class="überschrift-oben">
           <div class="überschrift-text">Weinnachtkekse der HHS</div>
         </div>
-        <div>
-          <div class="sub-heading">Teig</div>
-          <div class="sub-sub-heading">Basis Teig</div>
+        <div class="sub-container">
+          <!--Teig Art-->
           <div>
-            <label for="Schocklade">
-              <input type="radio" name="Teig" id="Schocklade" />
-              Schocklade
-            </label>
-          </div>
-          <div>
-            <label for="Butterkeks">
-              <input type="radio" name="Teig" id="Butterkeks" />
-              Butterkeks
-            </label>
-          </div>
-          <div>
-            <label for="Spekulatius">
-              <input type="radio" name="Teig" id="Spekulatius" />
-              Spekulatius
-            </label>
-          </div>
-        </div>
-
-        <!--Box Größe-->
-        <div>
-          <div class="sub-heading">Box Größe</div>
-          <div>
-            <label>
-              <input
-                type="radio"
-                name="boxSize"
-                value="5"
-                onchange="updatebox"
-              />
-              15 Kekse - 5€
-            </label>
-          </div>
-          <div>
-            <label>
-              <input type="radio" name="boxSize" value="7" />
-              21 Kekse - 7€
-            </label>
-          </div>
-          <div>
-            <label>
-              <input type="radio" name="boxSize" value="8.5" />
-              27 Kekse - 8,50€
-            </label>
-          </div>
-        </div>
-
-        <!--Keksform-->
-        <div>
-          <div class="sub-heading">Keksform</div>
-          <div>
-            <label>
-              <input type="radio" name="shape" value="0" id="runde-kekse" />
-              Rund (gratis)
-            </label>
-          </div>
-          <div>
-            <label>
-              <input type="radio" name="shape" value="0.5" id="stern-kekse" />
-              Stern (0,50€/Keks)
-            </label>
-          </div>
-          <div>
-            <label>
-              <input
-                type="radio"
-                name="shape"
-                value="0.5"
-                id="tannenbaum-kekse"
-              />
-              Tannenbaum (0,50€/Keks)
-            </label>
-          </div>
-          <div>
-            <label>
-              <input type="radio" name="shape" value="0" id="mischung" />
-              Mischung
-            </label>
-          </div>
-        </div>
-
-        <!--Kostenlose Topping-->
-        <div>
-          <div class="sub-heading">Ein kostenloses Topping</div>
-          <div>
-            <label>
-              <input type="radio" name="freeTopping" value="0" />
-              Ohne Topping
-            </label>
-          </div>
-          <div>
-            <label>
-              <input type="radio" name="freeTopping" value="0" />
-              Zuckerguss weiß
-            </label>
-          </div>
-          <div>
-            <label>
-              <input type="radio" name="freeTopping" value="0" />
-              Schokostreusel
-            </label>
-          </div>
-          <div>
-            <label>
-              <input type="radio" name="freeTopping" value="0" />
-              Bunte Streusel
-            </label>
-          </div>
-          <div>
-            <label>
-              <input type="radio" name="freeTopping" value="0" />
-              Puderzucker
-            </label>
-          </div>
-        </div>
-
-        <!--Extra Toppings-->
-        <div>
-          <div class="sub-heading">Extra Toppings (je 1€)</div>
-          <div>
-            <label>
-              <input type="checkbox" name="extraTopping" value="1" />
-              Zuckerguss (Farbauswahl)
-            </label>
-          </div>
-          <div>
-            <label>
-              <input type="checkbox" name="extraTopping" value="1" />
-              Schokoguß
-            </label>
-          </div>
-          <div>
-            <label>
-              <input type="checkbox" name="extraTopping" value="1" />
-              Bunte Streusel (Farbauswahl)
-            </label>
-          </div>
-          <div>
-            <label>
-              <input type="checkbox" name="extraTopping" value="1" />
-              Puderzucker
-            </label>
+            <div class="sub-heading">Teig</div>
+            <div class="sub-sub-heading">Basis Teig</div>
             <div>
-              <label>
-                <input type="checkbox" name="extraTopping" value="1" />
-                Knisterzucker
+              <label for="Schocklade">
+                <input type="radio" name="Teig" id="Schocklade" />
+                Schocklade
+              </label>
+            </div>
+            <div>
+              <label for="Butterkeks">
+                <input type="radio" name="Teig" id="Butterkeks" />
+                Butterkeks
+              </label>
+            </div>
+            <div>
+              <label for="Spekulatius">
+                <input type="radio" name="Teig" id="Spekulatius" />
+                Spekulatius
               </label>
             </div>
           </div>
+
+          <!--Box Größe-->
           <div>
-            <label>
-              <input type="checkbox" name="extraTopping" value="1" />
-              Sternstreusel
-            </label>
+            <div class="sub-heading">Box Größe</div>
+            <div>
+              <label>
+                <input
+                  type="radio"
+                  name="boxSize"
+                  value="5"
+                  onchange="updatebox"
+                />
+                15 Kekse - 5€
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="radio" name="boxSize" value="7" />
+                21 Kekse - 7€
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="radio" name="boxSize" value="8.5" />
+                27 Kekse - 8,50€
+              </label>
+            </div>
+          </div>
+
+          <!--Keksform-->
+          <div>
+            <div class="sub-heading">Keksform</div>
+            <div>
+              <label>
+                <input type="radio" name="shape" value="0" id="runde-kekse" />
+                Rund (gratis)
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="radio" name="shape" value="0.5" id="stern-kekse" />
+                Stern (0,50€/Keks)
+              </label>
+            </div>
+            <div>
+              <label>
+                <input
+                  type="radio"
+                  name="shape"
+                  value="0.5"
+                  id="tannenbaum-kekse"
+                />
+                Tannenbaum (0,50€/Keks)
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="radio" name="shape" value="0" id="mischung" />
+                Mischung
+              </label>
+            </div>
+          </div>
+
+          <!--Kostenlose Topping-->
+          <div>
+            <div class="sub-heading">Ein kostenloses Topping</div>
+            <div>
+              <label>
+                <input type="radio" name="freeTopping" value="0" />
+                Ohne Topping
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="radio" name="freeTopping" value="0" />
+                Zuckerguss weiß
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="radio" name="freeTopping" value="0" />
+                Schokostreusel
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="radio" name="freeTopping" value="0" />
+                Bunte Streusel
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="radio" name="freeTopping" value="0" />
+                Puderzucker
+              </label>
+            </div>
+          </div>
+
+          <!--Extra Toppings-->
+          <div>
+            <div class="sub-heading">Extra Toppings (je 1€)</div>
+            <div>
+              <label>
+                <input type="checkbox" name="extraTopping" value="1" />
+                Zuckerguss (Farbauswahl)
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="checkbox" name="extraTopping" value="1" />
+                Schokoguß
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="checkbox" name="extraTopping" value="1" />
+                Bunte Streusel (Farbauswahl)
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="checkbox" name="extraTopping" value="1" />
+                Puderzucker
+              </label>
+              <div>
+                <label>
+                  <input type="checkbox" name="extraTopping" value="1" />
+                  Knisterzucker
+                </label>
+              </div>
+            </div>
+            <div>
+              <label>
+                <input type="checkbox" name="extraTopping" value="1" />
+                Sternstreusel
+              </label>
+            </div>
+            <div>
+              <label>
+                <input
+                  type="checkbox"
+                  name="extraTopping"
+                  value="0"
+                  id="none"
+                />
+                Keine
+              </label>
+            </div>
+          </div>
+
+          <!--Verpackung-->
+          <div>
+            <div class="sub-heading">Verpackung</div>
+            <div>
+              <label>
+                <input type="radio" name="verpackung" value="0" />
+                Zellophantüte (gratis)
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="radio" name="verpackung" value="4.2" />
+                Runde Box (4,20€)
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="radio" name="verpackung" value="4.2" />
+                Eckige Box (4,20€)
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="radio" name="verpackung" value="4.2" />
+                Herzbox (4,20€)
+              </label>
+            </div>
+          </div>
+
+          <!--Optional-->
+          <div>
+            <div class="sub-heading">Optional</div>
+            <div>
+              <label>
+                <input type="checkbox" name="Optional" value="0.75" />
+                Schleife (0,75€)
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="checkbox" name="Optional" value="1.5" />
+                Karte mit persönlichem Text (1,50€)
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <div class="sub-heading">Preis</div>
+            <div id="total"></div>
+            <div id="shipping"></div>
+            <div id="MwSt"></div>
           </div>
           <div>
-            <label>
-              <input type="checkbox" name="extraTopping" value="0" id="none" />
-              Keine
-            </label>
+            <div class="sub-heading">Rabatt Code</div>
+            <div>
+              <input type="text" name="Rabatt_eingabe" id="Rabatt_eingabe" />
+            </div>
           </div>
         </div>
-
-        <!--Verpackung-->
-        <div>
-          <div class="sub-heading">Verpackung</div>
-          <div>
-            <label>
-              <input type="radio" name="verpackung" value="0" />
-              Zellophantüte (gratis)
-            </label>
-          </div>
-          <div>
-            <label>
-              <input type="radio" name="verpackung" value="4.2" />
-              Runde Box (4,20€)
-            </label>
-          </div>
-          <div>
-            <label>
-              <input type="radio" name="verpackung" value="4.2" />
-              Eckige Box (4,20€)
-            </label>
-          </div>
-          <div>
-            <label>
-              <input type="radio" name="verpackung" value="4.2" />
-              Herzbox (4,20€)
-            </label>
-          </div>
-        </div>
-
-        <!--Optional-->
-        <div>
-          <div class="sub-heading">Optional</div>
-          <div>
-            <label>
-              <input type="checkbox" name="Optional" value="0.75" />
-              Schleife (0,75€)
-            </label>
-          </div>
-          <div>
-            <label>
-              <input type="checkbox" name="Optional" value="1.5" />
-              Karte mit persönlichem Text (1,50€)
-            </label>
-          </div>
-        </div>
-
-        <div>
-          <div class="sub-heading">Preis</div>
-          <div id="total"></div>
-          <div id="shipping"></div>
-          <div id="VAT"></div>
-        </div>
-
         <script src="Index.js"></script>
       </div>
     </div>
