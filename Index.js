@@ -28,6 +28,8 @@ function base_price_calc() {
 }
 base_price_calc();
 
+//Rabatt
+
 // Versandkostenberechnung
 function shipping_calc() {
   if (base_price > 0 && base_price < 20) {
