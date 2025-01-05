@@ -35,8 +35,7 @@ body {
 .content {
   order: 2;
   width: fit-content;
-  box-shadow: -10px 0px 15px rgba(0, 0, 0, 0.3),
-    10px 0px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: -10px 0px 15px rgba(0, 0, 0, 0.3), 10px 0px 15px rgba(0, 0, 0, 0.3);
   position: relative;
 }
 .container {
@@ -57,6 +56,16 @@ body {
 }
 .Seite2 {
   order: 3;
+}
+.kartenText {
+  width: 400px;
+  height: 100px;
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  resize: none;
 }
 .input {
   opacity: 0;

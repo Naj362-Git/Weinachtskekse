@@ -21,19 +21,19 @@
             <div class="sub-heading">Box Größe</div>
             <div>
               <label>
-                <input type="radio" name="boxSize" value="5" onchange="boxsize()" />
+                <input type="radio" name="boxSize" value="5" onchange="boxsize(), Keksform()" />
                 15 Kekse - 5€
               </label>
             </div>
             <div>
               <label>
-                <input type="radio" name="boxSize" value="7" onchange="boxsize()" />
+                <input type="radio" name="boxSize" value="7" onchange="boxsize(), Keksform()" />
                 21 Kekse - 7€
               </label>
             </div>
             <div>
               <label>
-                <input type="radio" name="boxSize" value="8.5" onchange="boxsize()" />
+                <input type="radio" name="boxSize" value="8.5" onchange="boxsize(), Keksform()" />
                 27 Kekse - 8,50€
               </label>
             </div>
@@ -99,7 +99,7 @@
             </div>
             <div>
               <label>
-                <input type="radio" name="shape" value="0" />
+                <input type="radio" name="shape" value="100" onchange="Keksform()" />
                 Mischung
               </label>
             </div>
@@ -227,9 +227,13 @@
             </div>
             <div>
               <label>
-                <input type="checkbox" name="Optional" value="1.5" onchange="optional()" />
+                <input type="checkbox" name="Optional" value="1.5" id="Karte" onchange="optional()" />
                 Karte mit persönlichem Text (1,50€)
               </label>
+            </div>
+            <div>
+              <textarea class="kartenText" rows="4" cols="50" maxlength="200" oninput="MaxZeichenDisplay()"></textarea>
+              <div id="charCount">0/200</div>
             </div>
           </div>
 

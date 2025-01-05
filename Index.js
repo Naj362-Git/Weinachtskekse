@@ -60,7 +60,12 @@ function Keksform() {
       break;
     }
   }
-  keksform_P = keksform_P * boxgröße;
+  if (keksform_P === 100) {
+    keksform_P = boxgröße / 3;
+  } else {
+    keksform_P = keksform_P * boxgröße;
+  }
+  console.log("Kekse:", keksform_P);
   price_calc();
 }
 
@@ -80,6 +85,8 @@ function kTopping() {
 // Überprüfen welche Option ausgewählt wurde (E_topping_P)
 function eTopping() {
   const eTopping_Checkboxes = document.getElementsByName("extraTopping");
+
+  eTopping_P = 0;
 
   for (const checkbox of eTopping_Checkboxes) {
     if (checkbox.checked) {
@@ -107,6 +114,8 @@ function verpakung() {
 function optional() {
   const optional_Checkboxes = document.getElementsByName("Optional");
 
+  optional_P = 0;
+
   for (const checkbox of optional_Checkboxes) {
     if (checkbox.checked) {
       optional_P += parseFloat(checkbox.value);
@@ -116,10 +125,13 @@ function optional() {
   price_calc();
 }
 
-// Beim aufrufen der Webseite die Funktion price_calc ausführen
-window.onload = function () {
-  price_calc();
-};
+//Überprüfen ob Persönliche Karte ausgewählt wurde
+function personalCard() {
+  const personalCard_Checkbox = document.getElementById("Karte");
+  if (personalCard_Checkbox.checked) {
+  } else {
+  }
+}
 
 //Preisberechnung
 function price_calc() {
@@ -167,6 +179,10 @@ function price_calc() {
   console.log("Versandkosten:", format_number(shipping)); // Shipping cost
   console.log("Gesamtpreis:", format_number(total_price)); // Total price
   console.log("MwSt:", format_number(MwSt)); // VAT
+
+  document.getElementById("total").innerText = `Gesamtpreis: ${format_number(total_price)} €`;
+  document.getElementById("shipping").innerText = `Versandkosten: ${format_number(shipping)} €`;
+  document.getElementById("MwSt").innerText = `MwSt: ${format_number(MwSt)} €`;
 }
 
 //Umformatierung
@@ -176,3 +192,19 @@ function format_number(num) {
     maximumFractionDigits: 2,
   }).format(num);
 }
+
+//Funktion um die Anzahl der Zeichen in der Textarea zu zählen
+function MaxZeichenDisplay() {
+  const textarea = document.querySelector(".kartenText");
+  const charCount = document.getElementById("charCount");
+  const maxLength = textarea.getAttribute("maxlength");
+  const currentLength = textarea.value.length;
+
+  charCount.textContent = `${currentLength}/${maxLength}`;
+}
+
+// Bei Aufrufen der Website die Funktion price_calc und MaxZeichenDisplay ausführen
+window.onload = function () {
+  price_calc();
+  MaxZeichenDisplay();
+};
