@@ -14,13 +14,36 @@
           <div class="überschrift-text">Weinnachtkekse der HHS</div>
         </div>
         <div class="sub-container">
+          <!--Box Größe-->
+          <div>
+            <div class="sub-heading">Box Größe</div>
+            <div>
+              <label>
+                <input type="radio" name="boxSize" value="5" onchange="boxsize()" />
+                15 Kekse - 5€
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="radio" name="boxSize" value="7" onchange="boxsize()" />
+                21 Kekse - 7€
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="radio" name="boxSize" value="8.5" onchange="boxsize()" />
+                27 Kekse - 8,50€
+              </label>
+            </div>
+          </div>
+
           <!--Teig Art-->
           <div>
             <div class="sub-heading">Teig</div>
             <div class="sub-sub-heading">Basis Teig</div>
             <div>
               <label for="Schocklade">
-                <input type="radio" name="Teig" id="Schocklade" />
+                <input type="radio" name="Teig" id="Schocklade" value="" />
                 Schocklade
               </label>
             </div>
@@ -34,34 +57,6 @@
               <label for="Spekulatius">
                 <input type="radio" name="Teig" id="Spekulatius" />
                 Spekulatius
-              </label>
-            </div>
-          </div>
-
-          <!--Box Größe-->
-          <div>
-            <div class="sub-heading">Box Größe</div>
-            <div>
-              <label>
-                <input
-                  type="radio"
-                  name="boxSize"
-                  value="5"
-                  onchange="updatebox"
-                />
-                15 Kekse - 5€
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="boxSize" value="7" />
-                21 Kekse - 7€
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="boxSize" value="8.5" />
-                27 Kekse - 8,50€
               </label>
             </div>
           </div>
@@ -83,12 +78,7 @@
             </div>
             <div>
               <label>
-                <input
-                  type="radio"
-                  name="shape"
-                  value="0.5"
-                  id="tannenbaum-kekse"
-                />
+                <input type="radio" name="shape" value="0.5" id="tannenbaum-kekse" />
                 Tannenbaum (0,50€/Keks)
               </label>
             </div>
@@ -176,12 +166,7 @@
             </div>
             <div>
               <label>
-                <input
-                  type="checkbox"
-                  name="extraTopping"
-                  value="0"
-                  id="none"
-                />
+                <input type="checkbox" name="extraTopping" value="0" id="none" />
                 Keine
               </label>
             </div>
@@ -243,12 +228,7 @@
             <div class="sub-heading">Rabatt Code</div>
             <div>
               <input type="text" name="Rabatt_eingabe" id="Rabatt_eingabe" />
-              <input
-                type="button"
-                name="Rabatt_eingabe"
-                id="Rabatt_anwenden"
-                onclick="price_calc()"
-              />
+              <input type="button" name="Rabatt_eingabe" id="Rabatt_anwenden" onclick="price_calc()" />
             </div>
           </div>
         </div>

@@ -15,6 +15,20 @@ let K_topping_P = 20;
 let E_topping_P = 0;
 let verpakung_P = 0;
 let optional_P = 0;
+
+//Überprüfen welche box ausgewählt wurde (boxgröße_P)
+function boxsize() {
+  const boxradios = document.getElementsByName("boxSize");
+
+  for (const radio of boxradios) {
+    if (radio.checked) {
+      boxgröße_P = parseFloat(radio.value);
+      break;
+    }
+  }
+  price_calc();
+}
+
 // Beim aufrufen der Webseite die Funktion price_calc ausführen
 window.onload = function () {
   price_calc();
