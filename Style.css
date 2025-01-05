@@ -32,7 +32,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: baseline;
-  margin: 10px;
+  margin: 20px;
   gap: 10px;
 }
 .Teig {
@@ -139,7 +139,26 @@ body {
 }
 
 .preisanzeige {
-  border-top: solid;
+  width: fit-content;
+  height: fit-content;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 4px;
+  right: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+.preisanzeige:hover {
+  opacity: 1;
 }
 
 .kosten {

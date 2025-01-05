@@ -76,7 +76,6 @@ function Keksform() {
   } else {
     keksform_P = keksform_P * boxgröße;
   }
-  console.log("Kekse:", keksform_P);
   price_calc();
 }
 
@@ -138,7 +137,7 @@ function optional() {
   if (Karte_checkbox.checked) {
     document.getElementById("KartenText").style.opacity = "100%";
   } else {
-    document.getElementById("KartenText").style.opacity = "10%";
+    document.getElementById("KartenText").style.opacity = "30%";
     price_calc();
   }
 }
@@ -156,9 +155,8 @@ function price_calc() {
 
   if (r_code === rabattInput) {
     base_price = base_price - base_price * r_Rabatt;
-    console.log("Rabatt angewendet. Neuer Basispreis:", base_price);
   } else {
-    console.log("Kein Rabatt angewendet. Basispreis bleibt:", base_price);
+    base_price = base_price;
   }
 
   // Versandkostenberechnung
@@ -185,10 +183,7 @@ function price_calc() {
   }
   MwSt_calc();
 
-  console.log("Basispreis:", format_number(base_price)); // Base price
-  console.log("Versandkosten:", format_number(shipping)); // Shipping cost
-  console.log("Gesamtpreis:", format_number(total_price)); // Total price
-  console.log("MwSt:", format_number(MwSt)); // VAT
+  //Anzeige der Preise
 
   document.getElementById("sub-total").innerText = `Basispreis: ${format_number(base_price)} €`;
   document.getElementById("total").innerText = `Gesamtpreis: ${format_number(total_price)} €`;
