@@ -38,13 +38,7 @@ window.onload = function () {
 function price_calc() {
   //Basispreisberechnung
   function base_price_calc() {
-    base_price =
-      boxgröße_P +
-      keksform_P +
-      K_topping_P +
-      E_topping_P +
-      verpakung_P +
-      optional_P;
+    base_price = boxgröße_P + keksform_P + K_topping_P + E_topping_P + verpakung_P + optional_P;
   }
   base_price_calc();
 
