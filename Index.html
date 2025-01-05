@@ -180,21 +180,22 @@
             </div>
           </div>
           <!--Preisanzeige-->
-          <div>
+          <div class="preisanzeige">
             <div class="sub-heading">Preis</div>
-            <div id="sub-total"></div>
+            <div class="sub-total">
             <div id="total"></div>
             <div id="shipping"></div>
             <div id="MwSt"></div>
             <button class="bestellen">Jetzt Bestellen!</button>
           </div>
-          <div>
-            <div class="sub-heading">Rabatt Code</div>
-            <div>
-              <input type="text" name="Rabatt_eingabe" id="Rabatt_eingabe" />
-              <input type="button" name="Rabatt_eingabe" id="Rabatt_anwenden" onclick="price_calc()" />
-            </div>
           </div>
+          <div>
+            <div class="sub-heading">Hast du einen Rabatt Code?</div>
+            <div class="sub-sub-heading">Gebe es hier ein:</div>
+            <div class="rabattcode">
+              <input class="rabatteingabe" type="text" name="Rabatt_eingabe" id="Rabatt_eingabe" />
+              <input class="rabattanwenden" type="button" name="Rabatt_eingabe" id="Rabatt_anwenden" value="Anwenden" onclick="price_calc()" />
+            </div>
         </div>
         <script src="Index.js"></script>
       </div>
