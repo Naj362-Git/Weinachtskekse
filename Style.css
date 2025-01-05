@@ -25,7 +25,6 @@ body {
   font-size: 40px;
   padding: 16px;
   text-decoration: underline;
-
 }
 .sub-sub-heading {
   font-size: 20px;
@@ -43,7 +42,7 @@ body {
 .Seite {
   background-color: rgb(246, 240, 228);
   width: 100%;
-  height: auto; 
+  height: auto;
 }
 .Seite1 {
   order: 1;
@@ -64,10 +63,10 @@ body {
   padding-top: 5px;
   padding-bottom: 5px;
   margin: 15px;
-  background-color:rgb(250, 217, 217);
-  color:black;
-  }
-  
+  background-color: rgb(250, 217, 217);
+  color: black;
+}
+
 .buttonstyle:hover {
   border-radius: 18px;
   height: fit-content;
@@ -76,10 +75,6 @@ body {
   padding-top: 5px;
   padding-bottom: 5px;
   margin: 15px;
-<<<<<<< Updated upstream
-  background-color:rgb(217, 241, 250);
-  color:black;
-=======
   background-color: rgb(217, 241, 250);
   color: black;
 }
@@ -121,7 +116,6 @@ body {
   width: fit-content;
   height: 35px;
   font-size: 18px;
-  background-color:  rgb(217, 241, 250);
+  background-color: rgb(217, 241, 250);
   margin-top: 10px;
->>>>>>> Stashed changes
 }

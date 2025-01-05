@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 let base_price = 0;
 let total_price = 0;
 let shipping = 0;
@@ -210,4 +208,3 @@ window.onload = function () {
   price_calc();
   MaxZeichenDisplay();
 };
->>>>>>> Stashed changes

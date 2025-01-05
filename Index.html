@@ -13,6 +13,23 @@
         <div class="überschrift-oben">
           <div class="überschrift-text">Weinnachtkekse der HHS</div>
         </div>
+        <!--Preisanzeige-->
+        <div class="preisanzeige">
+          <div class="sub-heading">Preis</div>
+          <div class="kosten">
+          <div id="total"></div>
+          <div id="shipping"></div>
+          <div id="MwSt"></div>
+          <button class="bestellen">Jetzt Bestellen!</button>
+        </div>
+        </div>
+        <div>
+          <div class="sub-heading">Hast du einen Rabatt Code?</div>
+          <div class="sub-sub-heading">Gebe es hier ein:</div>
+          <div class="rabattcode">
+            <input class="rabatteingabe" type="text" name="Rabatt_eingabe" id="Rabatt_eingabe" />
+            <input class="rabattanwenden" type="button" name="Rabatt_eingabe" id="Rabatt_anwenden" value="Anwenden" onclick="price_calc()" />
+          </div>
         <div>
           <div class="sub-heading">Teig</div>
           <div class="sub-sub-heading">Basis Teig</div>
@@ -22,7 +39,6 @@
               Schocklade
             </label>
           </div>
-<<<<<<< Updated upstream
           <div class="buttonstyle">
             <label for="Butterkeks">
               <input type="radio" name="Teig" id="Butterkeks" />
@@ -34,25 +50,7 @@
               <input type="radio" name="Teig" id="Spekulatius" />
               Spekulatius
             </label>
-=======
-          <!--Preisanzeige-->
-          <div class="preisanzeige">
-            <div class="sub-heading">Preis</div>
-            <div class="kosten">
-            <div id="total"></div>
-            <div id="shipping"></div>
-            <div id="MwSt"></div>
-            <button class="bestellen">Jetzt Bestellen!</button>
-          </div>
-          </div>
-          <div>
-            <div class="sub-heading">Hast du einen Rabatt Code?</div>
-            <div class="sub-sub-heading">Gebe es hier ein:</div>
-            <div class="rabattcode">
-              <input class="rabatteingabe" type="text" name="Rabatt_eingabe" id="Rabatt_eingabe" />
-              <input class="rabattanwenden" type="button" name="Rabatt_eingabe" id="Rabatt_anwenden" value="Anwenden" onclick="price_calc()" />
-            </div>
->>>>>>> Stashed changes
+          
           </div>
         </div>
 
