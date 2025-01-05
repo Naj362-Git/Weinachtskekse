@@ -126,9 +126,9 @@ function optional() {
   const Karte_checkbox = document.getElementById("Karte");
 
   if (Karte_checkbox.checked) {
-    document.getElementById("KartenText").style.display = "block";
+    document.getElementById("KartenText").style.opacity = "100%";
   } else {
-    document.getElementById("KartenText").style.display = "none";
+    document.getElementById("KartenText").style.opacity = "10%";
     price_calc();
   }
 }
