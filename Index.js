@@ -86,7 +86,7 @@ function kTopping() {
 function eTopping() {
   const eTopping_Checkboxes = document.getElementsByName("extraTopping");
 
-  eTopping_P = 0;
+  E_topping_P = 0;
 
   for (const checkbox of eTopping_Checkboxes) {
     if (checkbox.checked) {
@@ -122,14 +122,14 @@ function optional() {
       break;
     }
   }
-  price_calc();
-}
+  //Überprüfen ob Persönliche Karte ausgewählt wurde
+  const Karte_checkbox = document.getElementById("Karte");
 
-//Überprüfen ob Persönliche Karte ausgewählt wurde
-function personalCard() {
-  const personalCard_Checkbox = document.getElementById("Karte");
-  if (personalCard_Checkbox.checked) {
+  if (Karte_checkbox.checked) {
+    document.getElementById("KartenText").style.display = "block";
   } else {
+    document.getElementById("KartenText").style.display = "none";
+    price_calc();
   }
 }
 
