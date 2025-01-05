@@ -40,13 +40,23 @@ function boxsize() {
 // Überprüfen welche Option ausgewählt wurde (teigart_P)
 function Teigart() {
   const teigartRadios = document.getElementsByName("Teig");
+  teigart_P = 0; // Reset teigart_P before calculating
 
+  // Radiobuttons
   for (const radio of teigartRadios) {
-    if (radio.checked) {
+    if (radio.type === "radio" && radio.checked) {
       teigart_P = parseFloat(radio.value);
       break;
     }
   }
+
+  //Checkboxes
+  for (const checkbox of teigartRadios) {
+    if (checkbox.type === "checkbox" && checkbox.checked) {
+      teigart_P += parseFloat(checkbox.value);
+    }
+  }
+
   price_calc();
 }
 
@@ -86,12 +96,11 @@ function kTopping() {
 function eTopping() {
   const eTopping_Checkboxes = document.getElementsByName("extraTopping");
 
-  E_topping_P = 0;
+  E_topping_P = 0; // Reset E_topping_P before calculating
 
   for (const checkbox of eTopping_Checkboxes) {
     if (checkbox.checked) {
       E_topping_P += parseFloat(checkbox.value);
-      break;
     }
   }
   price_calc();
@@ -137,7 +146,7 @@ function optional() {
 function price_calc() {
   //Basispreisberechnung
   function base_price_calc() {
-    base_price = boxgröße_P + keksform_P + K_topping_P + E_topping_P + verpakung_P + optional_P;
+    base_price = boxgröße_P + keksform_P + K_topping_P + E_topping_P + verpakung_P + optional_P + teigart_P;
   }
   base_price_calc();
 
