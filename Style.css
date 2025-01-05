@@ -37,7 +37,7 @@ body {
 }
 .Teig {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: baseline;
 }
@@ -96,25 +96,33 @@ body {
   text-decoration: underline;
 }
 .buttonstyle {
+  display: inline-block;
   border-radius: 18px;
   height: fit-content;
   width: fit-content;
-  padding-right: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
   margin: 15px;
   background-color: rgb(250, 217, 217);
   color: black;
+  cursor: pointer;
+  text-align: center;
 }
 
 .buttonstyle:hover {
-  border-radius: 18px;
-  height: fit-content;
-  width: fit-content;
-  padding-right: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin: 15px;
+  background-color: rgb(217, 241, 250);
+  color: black;
+}
+
+.buttonstyle input {
+  display: none;
+}
+
+.buttonstyle label {
+  display: block; /* Ensure the label covers the entire button area */
+  cursor: pointer; /* Change cursor to pointer for the entire label */
+  padding: 10px; /* Add padding to make the label area larger */
+  border-radius: 18px; /* Match the border radius of the button */
+}
+.buttonstyle input:checked + label {
   background-color: rgb(217, 241, 250);
   color: black;
 }

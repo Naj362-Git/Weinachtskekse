@@ -189,6 +189,7 @@ function price_calc() {
   console.log("Gesamtpreis:", format_number(total_price)); // Total price
   console.log("MwSt:", format_number(MwSt)); // VAT
 
+  document.getElementById("sub-total").innerText = `Basispreis: ${format_number(base_price)} €`;
   document.getElementById("total").innerText = `Gesamtpreis: ${format_number(total_price)} €`;
   document.getElementById("shipping").innerText = `Versandkosten: ${format_number(shipping)} €`;
   document.getElementById("MwSt").innerText = `MwSt: ${format_number(MwSt)} €`;
