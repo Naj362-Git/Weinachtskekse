@@ -137,3 +137,33 @@ body {
   box-sizing: border-box;
   border-radius: 4px;
 }
+
+.preisanzeige {
+  border-top: solid;
+}
+
+.kosten {
+  font-size: 26px;
+  padding-left: 16px;
+}
+.rabattcode {
+  padding-left: 16px;
+  padding-bottom: 36px;
+}
+.rabatteingabe {
+  background-color: rgb(250, 217, 217);
+  margin-top: 10px;
+  height: 30px;
+}
+.rabattanwenden {
+  width: fit-content;
+  height: 35px;
+  margin-left: 5px;
+}
+.bestellen {
+  width: fit-content;
+  height: 35px;
+  font-size: 18px;
+  background-color: rgb(217, 241, 250);
+  margin-top: 10px;
+}

@@ -40,7 +40,8 @@ function boxsize() {
 // Überprüfen welche Option ausgewählt wurde (teigart_P)
 function Teigart() {
   const teigartRadios = document.getElementsByName("Teig");
-  teigart_P = 0; // Reset teigart_P before calculating
+
+  teigart_P = 0;
 
   // Radiobuttons
   for (const radio of teigartRadios) {
@@ -96,7 +97,7 @@ function kTopping() {
 function eTopping() {
   const eTopping_Checkboxes = document.getElementsByName("extraTopping");
 
-  E_topping_P = 0; // Reset E_topping_P before calculating
+  E_topping_P = 0;
 
   for (const checkbox of eTopping_Checkboxes) {
     if (checkbox.checked) {
