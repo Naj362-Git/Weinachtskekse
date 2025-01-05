@@ -22,10 +22,14 @@ body {
   margin: auto;
 }
 .sub-heading {
-  font-size: 27px;
+  font-size: 40px;
+  padding: 16px;
+  text-decoration: underline;
+
 }
 .sub-sub-heading {
   font-size: 20px;
+  padding-left: 16px;
 }
 .content {
   order: 2;
@@ -39,7 +43,7 @@ body {
 .Seite {
   background-color: rgb(246, 240, 228);
   width: 100%;
-  height: 1000px;
+  height: auto; 
 }
 .Seite1 {
   order: 1;
@@ -52,26 +56,26 @@ body {
   height: 0;
   width: 0;
 }
-.verpackung {
+.buttonstyle {
   border-radius: 18px;
   height: fit-content;
   width: fit-content;
-  padding-right: 5px;
+  padding-right: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
-  margin: 20px;
+  margin: 15px;
   background-color:rgb(250, 217, 217);
   color:black;
   }
   
-.verpackung:hover {
+.buttonstyle:hover {
   border-radius: 18px;
   height: fit-content;
   width: fit-content;
-  padding-right: 5px;
+  padding-right: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
-  margin: 20px;
+  margin: 15px;
   background-color:rgb(217, 241, 250);
   color:black;
 }
