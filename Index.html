@@ -190,13 +190,27 @@
               </div>
             </div>
           </div>
-          <!--Preisanzeige-->
-          <div class="preisanzeige">
-            <div class="kosten" id="sub-total"></div>
-            <div class="kosten" id="total"></div>
-            <div class="kosten" id="shipping"></div>
-            <div class="kosten" id="MwSt"></div>
+        </div>
+        <!--Preisanzeige-->
+        <div class="preisanzeige">
+          <div class="kosten" id="sub-total"></div>
+          <!--Ausgewählte Artikel in den Warenkorb legen-->
+          <div class="add-to-cart">
+            <button onclick="addSelectedItemsToCart()">Ausgewählte Artikel in den Warenkorb legen</button>
           </div>
+        </div>
+        <!-- Einkaufswagen Icon -->
+        <div class="shopping-cart-icon" onclick="toggleCart()">
+          🛒
+          <span id="cart-count">0</span>
+        </div>
+
+        <!-- Einkaufswagen Container -->
+        <div class="shopping-cart" id="shopping-cart">
+          <h2>Einkaufswagen</h2>
+          <ul id="cart-items"></ul>
+          <div id="cart-total">Gesamt preis: 0€</div>
+          <button onclick="checkout()">Checkout</button>
         </div>
         <script src="Index.js"></script>
       </div>

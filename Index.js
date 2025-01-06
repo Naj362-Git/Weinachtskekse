@@ -185,7 +185,7 @@ function price_calc() {
 
   //Anzeige der Preise
 
-  document.getElementById("sub-total").innerText = `Basispreis: ${format_number(base_price)} €`;
+  document.getElementById("sub-total").innerText = `Preis: ${format_number(base_price)} €`;
   document.getElementById("total").innerText = `Gesamtpreis: ${format_number(total_price)} €`;
   document.getElementById("shipping").innerText = `Versandkosten: ${format_number(shipping)} €`;
   document.getElementById("MwSt").innerText = `MwSt: ${format_number(MwSt)} €`;
@@ -214,3 +214,97 @@ window.onload = function () {
   price_calc();
   MaxZeichenDisplay();
 };
+//Einkaufswagen
+let cart = [];
+let cartTotal = 0;
+
+function toggleCart() {
+  const cartElement = document.getElementById("shopping-cart");
+  cartElement.style.display = cartElement.style.display === "none" ? "block" : "none";
+}
+
+function addSelectedItemsToCart() {
+  const selectedItems = [];
+  let totalPrice = 0;
+
+  // Ausgewählte Boxgröße abrufen
+  const boxSize = document.querySelector('input[name="boxSize"]:checked');
+  if (boxSize) {
+    selectedItems.push({ name: boxSize.nextElementSibling.textContent, price: parseFloat(boxSize.value) });
+    totalPrice += parseFloat(boxSize.value);
+  }
+
+  // Ausgewählte Teigart abrufen
+  const doughType = document.querySelector('input[name="Teig"]:checked');
+  if (doughType) {
+    selectedItems.push({ name: doughType.nextElementSibling.textContent, price: parseFloat(doughType.value) });
+    totalPrice += parseFloat(doughType.value);
+  }
+
+  // Ausgewählte Sonderoptionen abrufen
+  const specialOptions = document.querySelectorAll('input[name="Teig"]:checked');
+  specialOptions.forEach((option) => {
+    selectedItems.push({ name: option.nextElementSibling.textContent, price: parseFloat(option.value) });
+    totalPrice += parseFloat(option.value);
+  });
+
+  // Ausgewählte Keksform abrufen
+  const shape = document.querySelector('input[name="shape"]:checked');
+  if (shape) {
+    selectedItems.push({ name: shape.nextElementSibling.textContent, price: parseFloat(shape.value) });
+    totalPrice += parseFloat(shape.value);
+  }
+
+  // Ausgewähltes kostenloses Topping abrufen
+  const freeTopping = document.querySelector('input[name="kTopping"]:checked');
+  if (freeTopping) {
+    selectedItems.push({ name: freeTopping.nextElementSibling.textContent, price: parseFloat(freeTopping.value) });
+    totalPrice += parseFloat(freeTopping.value);
+  }
+
+  // Ausgewählte extra Toppings abrufen
+  const extraToppings = document.querySelectorAll('input[name="extraTopping"]:checked');
+  extraToppings.forEach((topping) => {
+    selectedItems.push({ name: topping.nextElementSibling.textContent, price: parseFloat(topping.value) });
+    totalPrice += parseFloat(topping.value);
+  });
+
+  // Ausgewählte optionale Artikel abrufen
+  const optionalItems = document.querySelectorAll('input[name="Optional"]:checked');
+  optionalItems.forEach((item) => {
+    selectedItems.push({ name: item.nextElementSibling.textContent, price: parseFloat(item.value) });
+    totalPrice += parseFloat(item.value);
+  });
+
+  // Ausgewählte Artikel zum Warenkorb hinzufügen
+  selectedItems.forEach((item) => {
+    cart.push(item);
+  });
+
+  updateCart();
+}
+
+function updateCart() {
+  const cartItemsElement = document.getElementById("cart-items");
+  const cartCountElement = document.getElementById("cart-count");
+  const cartTotalElement = document.getElementById("cart-total");
+
+  cartItemsElement.innerHTML = "";
+  cartTotal = 0;
+
+  cart.forEach((item) => {
+    const li = document.createElement("li");
+    li.textContent = `${item.name}`;
+    cartItemsElement.appendChild(li);
+    cartTotal += item.price;
+  });
+
+  cartCountElement.textContent = cart.length;
+  cartTotalElement.textContent = `Gesamtpreis: ${cartTotal}€`;
+}
+
+function checkout() {
+  alert(`Gesamtbetrag: ${cartTotal}€`);
+  cart = [];
+  updateCart();
+}
