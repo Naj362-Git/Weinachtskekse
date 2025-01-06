@@ -138,8 +138,8 @@ function optional() {
     document.getElementById("KartenText").style.opacity = "100%";
   } else {
     document.getElementById("KartenText").style.opacity = "30%";
-    price_calc();
   }
+  price_calc();
 }
 
 //Preisberechnung
