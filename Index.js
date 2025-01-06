@@ -1,3 +1,4 @@
+//Variablen
 let base_price = 0;
 let total_price = 0;
 let shipping = 0;
@@ -37,6 +38,7 @@ function boxsize() {
   }
   price_calc();
 }
+
 // Überprüfen welche Option ausgewählt wurde (teigart_P)
 function Teigart() {
   const teigartRadios = document.getElementsByName("Teig");
@@ -214,6 +216,7 @@ window.onload = function () {
   price_calc();
   MaxZeichenDisplay();
 };
+
 //Einkaufswagen
 let cart = [];
 let cartTotal = 0;
