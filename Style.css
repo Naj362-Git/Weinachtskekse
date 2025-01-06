@@ -1,61 +1,10 @@
+/* Grundlegende Stile für den Body */
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
   margin: 0;
   padding: 0;
 }
-.überschrift-oben {
-  /*background-image: url(https://recipesblob.oetker.at/assets/4529d60545444793b46c315830823e44/1920x1080/weihnachtskekse_klein.webp); /*1920*/
-  background-image: url(https://www.santosgrills.de/grill-magazin/wp-content/uploads/2021/09/Klassische-Weihnachtsplaetzchen-vom-Grill.jpg); /*1200*/
-  /*background-image: url(https://images.eatsmarter.de/sites/default/files/styles/1600x1200/public/weihnachtskekse-ohne-butter-59553.jpg); /*1600*/
-  height: 200px;
-  width: 1200px;
-  margin: 0;
-  align-content: center;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.überschrift-text {
-  background-color: rgb(250, 217, 217);
-  font-size: xx-large;
-  width: fit-content;
-  margin: 0;
-  padding: 10px;
-  border-radius: 10px;
-  margin: auto;
-}
-.sub-container {
-  padding: 5px;
-}
-.input-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: baseline;
-  margin: 20px;
-  gap: 10px;
-}
-.Teig {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: baseline;
-}
-.sub-heading {
-  font-size: 40px;
-  padding: 16px;
-  text-decoration: underline;
-}
-.sub-sub-heading {
-  font-size: 20px;
-  padding-left: 16px;
-}
-.content {
-  order: 2;
-  width: fit-content;
-  box-shadow: -10px 0px 15px rgba(0, 0, 0, 0.3), 10px 0px 15px rgba(0, 0, 0, 0.3);
-  position: relative;
-}
+
 .container {
   display: flex;
   flex-direction: row;
@@ -66,41 +15,99 @@ body {
   margin: 0 auto;
   box-sizing: border-box;
 }
+
 .Seite {
   background-color: rgb(246, 240, 228);
   width: 100%;
   height: auto;
 }
+
 .Seite1 {
   order: 1;
 }
+
 .Seite2 {
   order: 3;
 }
-.kartenText {
-  width: 400px;
-  height: 100px;
-  font-size: 16px;
+
+.content {
+  order: 2;
+  width: fit-content;
+  box-shadow: -10px 0px 15px rgba(0, 0, 0, 0.3), 10px 0px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  max-width: 100vm;
+}
+
+.überschrift-oben {
+  /*verschiedene Bilder als Optionen*/
+  background-image: url(https://www.santosgrills.de/grill-magazin/wp-content/uploads/2021/09/Klassische-Weihnachtsplaetzchen-vom-Grill.jpg); /*1200*/
+  /*background-image: url(https://images.eatsmarter.de/sites/default/files/styles/1600x1200/public/weihnachtskekse-ohne-butter-59553.jpg); /*1600*/
+  /*background-image: url(https://recipesblob.oetker.at/assets/4529d60545444793b46c315830823e44/1920x1080/weihnachtskekse_klein.webp); /*1920*/
+  height: 200px;
+  width: 1200px;
+  margin: 0;
+  align-content: center;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.überschrift-text {
+  background-color: rgb(250, 217, 217);
+  font-size: xx-large;
+  width: fit-content;
+  margin: 0;
+  padding: 10px;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.sub-container {
   padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: none;
 }
-.kartenText:hover {
-  border: 1px solid #aaa;
-}
+
 .Bestellung {
   text-align: center;
   font-size: 40px;
   padding: 16px;
   text-decoration: underline;
 }
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  margin: 20px;
+  gap: 10px;
+}
+
+.input {
+  width: fit-content;
+  height: fit-content;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.sub-heading {
+  font-size: 40px;
+  padding: 16px;
+  text-decoration: underline;
+}
+
 .buttonstyle {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
   border-radius: 18px;
   height: fit-content;
   width: fit-content;
-  margin: 15px;
+  margin: 10px;
   background-color: rgb(250, 217, 217);
   color: black;
   cursor: pointer;
@@ -117,25 +124,58 @@ body {
 }
 
 .buttonstyle label {
-  display: block; /* Ensure the label covers the entire button area */
-  cursor: pointer; /* Change cursor to pointer for the entire label */
-  padding: 10px; /* Add padding to make the label area larger */
-  border-radius: 18px; /* Match the border radius of the button */
+  display: block;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 18px;
 }
+
 .buttonstyle input:checked + label {
   background-color: rgb(217, 241, 250);
   color: black;
 }
-.input {
-  width: fit-content;
-  height: fit-content;
-  padding: 12px 20px;
-  margin: 8px 0;
+
+.Teig {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: baseline;
+}
+
+.sub-sub-heading {
+  font-size: 20px;
+  padding-left: 16px;
+}
+
+.kartenText {
+  width: 400px;
+  height: 100px;
+  font-size: 16px;
+  padding: 5px;
   border: 1px solid #ccc;
-  box-sizing: border-box;
   border-radius: 4px;
+  resize: none;
+}
+
+.kartenText:hover {
+  border: 1px solid #aaa;
+}
+
+.rabattcode {
+  padding-left: 16px;
+  padding-bottom: 36px;
+}
+
+.rabatteingabe {
+  background-color: rgb(250, 217, 217);
+  margin-top: 10px;
+  height: 30px;
+}
+
+.rabattanwenden {
+  width: fit-content;
+  height: 35px;
+  margin-left: 5px;
 }
 
 .preisanzeige {
@@ -157,6 +197,7 @@ body {
   opacity: 0.7;
   transition: opacity 0.3s ease;
 }
+
 .preisanzeige:hover {
   opacity: 1;
 }
@@ -165,20 +206,7 @@ body {
   font-size: 26px;
   padding-left: 16px;
 }
-.rabattcode {
-  padding-left: 16px;
-  padding-bottom: 36px;
-}
-.rabatteingabe {
-  background-color: rgb(250, 217, 217);
-  margin-top: 10px;
-  height: 30px;
-}
-.rabattanwenden {
-  width: fit-content;
-  height: 35px;
-  margin-left: 5px;
-}
+/* Ehemaliger bestellbutton 
 .bestellen {
   width: fit-content;
   height: 35px;
@@ -186,3 +214,4 @@ body {
   background-color: rgb(217, 241, 250);
   margin-top: 10px;
 }
+*/

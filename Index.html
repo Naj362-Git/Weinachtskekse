@@ -6,15 +6,24 @@
     <title>Weinnachtkekse</title>
   </head>
   <body>
+    <!--Webseite-->
     <div class="container">
+      <!--Die beiden Seiten Teile-->
       <div class="Seite1 Seite"></div>
       <div class="Seite2 Seite"></div>
+
+      <!--Inhalt-->
       <div class="content">
+        <!--Überschrift-->
         <div class="überschrift-oben">
           <div class="überschrift-text">Weinnachtkekse der HHS</div>
         </div>
+
+        <!--Bestellung inkl. Überschrift-->
         <div class="sub-container">
           <div class="Bestellung">Bestellung</div>
+
+          <!--Bestellung -->
           <div class="input-container">
             <!--Box Größe-->
             <div class="input">
@@ -117,7 +126,14 @@
               <div class="sub-heading">Extra Toppings</div>
               <div class="buttonstyle">
                 <input type="checkbox" name="extraTopping" value="1" id="extraZuckerguss" onchange="eTopping()" />
-                <label for="extraZuckerguss">Zuckerguss (Farbauswahl) + 1€</label>
+                <label for="extraZuckerguss"
+                  >Zuckerguss + 1€
+                  <select id="colorExtraZuckerguss" name="colorExtraZuckerguss" onchange="eTopping()">
+                    <option value="#ff0000">Rot</option>
+                    <option value="#00ff00">Grün</option>
+                    <option value="#0000ff">Blau</option>
+                  </select>
+                </label>
               </div>
               <div class="buttonstyle">
                 <input type="checkbox" name="extraTopping" value="1" id="extraSchokoguß" onchange="eTopping()" />
@@ -125,7 +141,14 @@
               </div>
               <div class="buttonstyle">
                 <input type="checkbox" name="extraTopping" value="1" id="extraBunteStreusel" onchange="eTopping()" />
-                <label for="extraBunteStreusel">Bunte Streusel (Farbauswahl) + 1€</label>
+                <label for="extraBunteStreusel"
+                  >Bunte Streusel + 1€
+                  <select id="colorExtraBunteStreusel" name="colorExtraBunteStreusel" onchange="eTopping()">
+                    <option value="#ff0000">Rot</option>
+                    <option value="#00ff00">Grün</option>
+                    <option value="#0000ff">Blau</option>
+                  </select>
+                </label>
               </div>
               <div class="buttonstyle">
                 <input type="checkbox" name="extraTopping" value="1" id="extraPuderzucker" onchange="eTopping()" />
@@ -178,6 +201,8 @@
                 <div id="charCount">0/200</div>
               </div>
             </div>
+
+            <!--Rabatt Code-->
             <div class="input">
               <div class="sub-heading">
                 Hast du einen <br />
@@ -190,6 +215,7 @@
               </div>
             </div>
           </div>
+
           <!--Preisanzeige-->
           <div class="preisanzeige">
             <div class="kosten" id="shipping"></div>

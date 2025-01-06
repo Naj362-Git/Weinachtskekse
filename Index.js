@@ -1,3 +1,4 @@
+// Alle Variablen werden deklariert
 let base_price = 0;
 let total_price = 0;
 let shipping = 0;
