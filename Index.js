@@ -8,7 +8,9 @@ let MwSt = 0;
 const MwSt_Satz = 0.07;
 
 const r_code = "XMAS2024";
+const d_Code = "Debug_Ü50";
 const r_Rabatt = 0.1;
+const d_Rabatt = 50;
 
 let boxgröße_P = 0;
 let boxgröße = 0;
@@ -156,17 +158,24 @@ function price_calc() {
 
   if (r_code === rabattInput) {
     base_price = base_price - base_price * r_Rabatt;
+  } else if (d_Code === rabattInput) {
+    base_price = base_price + d_Rabatt;
   } else {
     base_price = base_price;
   }
 
   // Versandkostenberechnung
   function shipping_calc() {
-    if (base_price > 0 && base_price < 20) {
+    if (base_price >= 0 && base_price < 20) {
       shipping = 3.99;
+      document.getElementById("shipping").style.color = "red";
     } else if (base_price >= 20 && base_price < 50) {
       shipping = 1.8;
-    } else shipping = 0;
+      document.getElementById("shipping").style.color = "red";
+    } else {
+      shipping = 0;
+      document.getElementById("shipping").style.color = "green";
+    }
   }
   shipping_calc();
 
