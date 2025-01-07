@@ -107,7 +107,7 @@ body {
   border-radius: 18px;
   height: fit-content;
   width: fit-content;
-  margin: 10px;
+  margin: 5px;
   background-color: rgb(250, 217, 217);
   color: black;
   cursor: pointer;
@@ -206,6 +206,12 @@ body {
   font-size: 26px;
   padding-left: 16px;
 }
+
+::selection {
+  color: rgba(0, 0, 0, 0.608);
+  background: rgba(102, 36, 36, 0.608);
+}
+
 /* Ehemaliger bestellbutton 
 .bestellen {
   width: fit-content;

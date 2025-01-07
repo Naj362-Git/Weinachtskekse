@@ -8,8 +8,10 @@ let MwSt = 0;
 const MwSt_Satz = 0.07;
 
 const r_code = "XMAS2024";
-const d_Code = "Debug_Ü50";
 const r_Rabatt = 0.1;
+
+//"Rabatt" für Testzwecke um zu zeige, dass die Farbwechsel Funktion funktioniert.
+const d_Code = "ShippingTest50";
 const d_Rabatt = 50;
 
 let boxgröße_P = 0;
@@ -166,7 +168,7 @@ function price_calc() {
 
   // Versandkostenberechnung
   function shipping_calc() {
-    if (base_price >= 0 && base_price < 20) {
+    if (base_price > 0 && base_price < 20) {
       shipping = 3.99;
       document.getElementById("shipping").style.color = "red";
     } else if (base_price >= 20 && base_price < 50) {
@@ -174,7 +176,7 @@ function price_calc() {
       document.getElementById("shipping").style.color = "red";
     } else {
       shipping = 0;
-      document.getElementById("shipping").style.color = "green";
+      document.getElementById("shipping").style.color = "black";
     }
   }
   shipping_calc();
