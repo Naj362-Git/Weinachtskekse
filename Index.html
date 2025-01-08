@@ -16,14 +16,14 @@
       <div class="content">
         <!--Überschrift-->
         <div class="überschrift-oben">
-          <div class="überschrift-text">Weinnachtkekse der HHS</div>
+          <div class="überschrift-text">Weinnachtkekse der <a href="https://www.heinrich-hertz-schule-hamburg.de/" class="überschrift-Link" target="_blank">HHS</a></div>
         </div>
 
         <!--Bestellung inkl. Überschrift-->
         <div class="sub-container">
           <div class="Bestellung">Bestellung</div>
 
-          <!--Bestellung -->
+          <!--Bestellungsformular-->
           <div class="input-container">
             <!--Box Größe-->
             <div class="input">
@@ -218,10 +218,22 @@
 
           <!--Preisanzeige-->
           <div class="preisanzeige">
-            <div class="kosten" id="shipping"></div>
-            <div class="kosten" id="MwSt"></div>
-            <div class="kosten" id="sub-total"></div>
-            <div class="kosten" id="total"></div>
+            <div class="kostencontainer">
+              <div class="kosten">Basispreis:</div>
+              <div class="kosten" id="sub-total"></div>
+            </div>
+            <div class="kostencontainer">
+              <div class="kosten">MwSt:</div>
+              <div class="kosten" id="MwSt"></div>
+            </div>
+            <div class="kostencontainer">
+              <div class="kosten">Versandkosten:</div>
+              <div class="kosten" id="shipping"></div>
+            </div>
+            <div class="kostencontainer">
+              <div class="kosten">Gesamtpreis:</div>
+              <div class="kosten" id="total"></div>
+            </div>
           </div>
         </div>
         <script src="Index.js"></script>
