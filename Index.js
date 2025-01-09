@@ -10,7 +10,7 @@ const MwSt_Satz = 0.07;
 const r_code = "XMAS2024";
 const r_Rabatt = 0.1;
 
-//"Rabatt" für Testzwecke um zu zeige, dass die Farbwechsel Funktion funktioniert.
+//"Rabatt" für Testzwecke um zu zeigen, dass die Farbwechsel Funktion funktioniert.
 const d_Code = "ShippingTest50";
 const d_Rabatt = 50;
 
@@ -200,10 +200,10 @@ function price_calc() {
 
   //Anzeige der Preise
 
-  document.getElementById("sub-total").innerText = `Basispreis: ${format_number(base_price)} €`;
-  document.getElementById("total").innerText = `Gesamtpreis: ${format_number(total_price)} €`;
-  document.getElementById("shipping").innerText = `Versandkosten: ${format_number(shipping)} €`;
-  document.getElementById("MwSt").innerText = `MwSt: ${format_number(MwSt)} €`;
+  document.getElementById("sub-total").innerText = `${format_number(base_price)} €`;
+  document.getElementById("total").innerText = `${format_number(total_price)} €`;
+  document.getElementById("shipping").innerText = ` ${format_number(shipping)} €`;
+  document.getElementById("MwSt").innerText = ` ${format_number(MwSt)} €`;
 }
 
 //Umformatierung
