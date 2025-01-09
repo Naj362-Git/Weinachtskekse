@@ -174,6 +174,9 @@ function price_calc() {
     } else if (base_price >= 20 && base_price < 50) {
       shipping = 1.8;
       document.getElementById("shipping").style.color = "red";
+    } else if (base_price >= 50) {
+      shipping = 0;
+      document.getElementById("shipping").style.color = "green";
     } else {
       shipping = 0;
       document.getElementById("shipping").style.color = "black";
